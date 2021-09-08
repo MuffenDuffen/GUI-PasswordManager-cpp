@@ -8,5 +8,5 @@ public:
     ~cMain();
 	
 public:
-	
+	wxStaticText* text;
 };
