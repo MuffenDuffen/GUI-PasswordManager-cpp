@@ -1,5 +1,7 @@
 ﻿#include "cMain.h"
 
+#include "Brain/Encryptor/LatinizeLOL/LatinizeLOLEncryptor.h"
+
 wxBEGIN_EVENT_TABLE(cMain, wxFrame)
     EVT_TEXT_ENTER(2, OnPassEnter)
 wxEND_EVENT_TABLE()
@@ -7,7 +9,7 @@ wxEND_EVENT_TABLE()
 cMain::cMain() : wxFrame(nullptr, 0, "Password Manager", wxDefaultPosition,  wxSize(800, 600))
 {
     // Filer
-    Filer = new cFiler("data");
+    //Filer = new cFiler("data");
 
     // Window
     auto* masterSizer = new wxBoxSizer(wxVERTICAL);
@@ -44,6 +46,11 @@ cMain::~cMain()
 void cMain::OnPassEnter(wxCommandEvent& event)
 {
     // Encrypt and hash
+
+    std::string encryptedPassword = LatinizeLOLEncryptor::convert_number_to_latin("123");
+
+    std::cout << encryptedPassword << std::endl;
+    
     event.Skip();
 }
 

@@ -1,5 +1,8 @@
 ﻿#pragma once
-#include "cFiler.h"
+
+#define _CRT_SECURE_NO_WARNINGS
+
+#include "Brain/Filer/cFiler.h"
 #include "wx/wx.h"
 
 class cMain : public wxFrame
