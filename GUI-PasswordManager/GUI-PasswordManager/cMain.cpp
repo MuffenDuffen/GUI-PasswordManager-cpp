@@ -1,9 +1,9 @@
 ﻿#include "cMain.h"
 
-#include "Brain/Encryptor/Encryptor.h"
+#include "Brain/Encryptor/LatinizeLOL/LatinizeLOLEncryptor.h"
 
 wxBEGIN_EVENT_TABLE(cMain, wxFrame)
-    EVT_BUTTON(3, cMain::onEnter)
+EVT_BUTTON(3, cMain::OnEnter)
 wxEND_EVENT_TABLE()
 
 cMain::cMain() : wxFrame(nullptr, 0, "Password Manager", wxDefaultPosition,  wxSize(800, 600))
@@ -44,10 +44,8 @@ cMain::~cMain()
     
 }
 
-void cMain::onEnter(wxCommandEvent& event)
+void cMain::OnEnter(wxCommandEvent& event)
 {
-    auto number = Encryptor::Latinizer::convert_number_to_latin("123");
-
-    
+    Enter->SetLabel(Input->GetValue());
     event.Skip();
 }
