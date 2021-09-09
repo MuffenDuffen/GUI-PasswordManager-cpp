@@ -1,5 +1,7 @@
 ﻿#pragma once
 
+#define _CRT_SECURE_NO_WARNINGS
+
 #include "Brain/Filer/cFiler.h"
 #include "wx/wx.h"
 
@@ -7,9 +9,9 @@ class cMain : public wxFrame
 {
 public:
     cMain();
-    ~cMain();
+    ~cMain() override;
 
-	void OnEnter(wxCommandEvent& event);
+	void onEnter(wxCommandEvent& event);
 	
 public:
 	wxStaticText* Text;
