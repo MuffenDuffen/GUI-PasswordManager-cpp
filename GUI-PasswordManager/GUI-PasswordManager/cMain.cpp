@@ -1,17 +1,11 @@
 ﻿#include "cMain.h"
 
-#include "Brain/Encryptor/LatinizeLOL/LatinizeLOLEncryptor.h"
-
 wxBEGIN_EVENT_TABLE(cMain, wxFrame)
 EVT_BUTTON(3, cMain::OnEnter)
 wxEND_EVENT_TABLE()
 
 cMain::cMain() : wxFrame(nullptr, 0, "Password Manager", wxDefaultPosition,  wxSize(800, 600))
 {
-    // Filer
-    //Filer = new cFiler("data");
-
-    // Window
     auto* masterSizer = new wxBoxSizer(wxVERTICAL);
     // Big text on startup
     const auto titleFont = wxFont(45, wxFONTFAMILY_MODERN, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL);
