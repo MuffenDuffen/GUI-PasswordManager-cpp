@@ -1,7 +1,7 @@
 #pragma once
 
 #include "wx/wx.h"
-#include "cMain.h"
+#include "GUI/cMain.h"
 
 class cApp : public wxApp
 {
