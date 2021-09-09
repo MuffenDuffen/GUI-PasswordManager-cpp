@@ -6,7 +6,13 @@ class cMain : public wxFrame
 public:
     cMain();
     ~cMain();
+
+	void OnEnter(wxCommandEvent& event);
 	
 public:
-	wxStaticText* text;
+	wxStaticText* Text;
+	wxTextCtrl* Input;
+	wxButton* Enter;
+
+	wxDECLARE_EVENT_TABLE();
 };
