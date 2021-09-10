@@ -21,6 +21,6 @@ cMain::~cMain()
 
 void cMain::OnEnter(wxCommandEvent& event)
 {
-    Login->Enter->SetLabel(Login->Input->GetValue());
+    if(Login->Input->GetValue() == Filer->File[0]) Login->Text->SetLabel("IN!!");
     event.Skip();
 }
