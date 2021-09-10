@@ -6,8 +6,12 @@ wxEND_EVENT_TABLE()
 
 cMain::cMain() : wxFrame(nullptr, 0, "Password Manager", wxDefaultPosition,  wxSize(800, 600))
 {
+    Filer = new cFiler("data");
+    if(!Filer->New)
+    {
+        Login = new cLogin(this);
+    }
     
-    Login = new cLogin(this);
 }
 
 cMain::~cMain()

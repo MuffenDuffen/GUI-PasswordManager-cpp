@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "wx/wx.h"
 #include "cLogin.h"
+#include "../Brain/cFiler.h"
 
 class cMain : public wxFrame
 {
@@ -12,9 +13,7 @@ public:
 	
 public:
 	cLogin* Login;
-	// wxStaticText* Text;
-	// wxTextCtrl* Input;
-	// wxButton* Enter;
+	cFiler* Filer;
 
 	wxDECLARE_EVENT_TABLE();
 };
