@@ -35,3 +35,6 @@
 *.ipch
 *.suo
 *.db
+*.db-wal
+*.db-shm
+*.opendb
