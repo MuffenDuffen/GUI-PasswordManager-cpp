@@ -6,7 +6,7 @@
 class cApp : public wxApp
 {
 private:
-    cMain* m_frame1 = nullptr;
+    cMain* _frame1 = nullptr;
 
 public:
     bool OnInit() override;
