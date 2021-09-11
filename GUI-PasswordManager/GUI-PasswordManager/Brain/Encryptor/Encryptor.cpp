@@ -2,7 +2,9 @@
 
 void cEncryptor::Encrypt(std::string& to_be_encrypted)
 {
-    
+    const std::string lel = "lel";
+
+    std::string outputString = StringToLatin(lel);
 }
 
 void cEncryptor::NextChar(std::string& input)
