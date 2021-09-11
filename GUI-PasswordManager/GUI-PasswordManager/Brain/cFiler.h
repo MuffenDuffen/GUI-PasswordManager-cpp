@@ -2,7 +2,6 @@
 #include <string>
 #include <vector>
 #include "../cProfile.h"
-#include "Encryptor.h"
 
 class cFiler
 {

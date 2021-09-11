@@ -1,5 +1,6 @@
 ﻿#include "cFiler.h"
 #include <fstream>
+#include "../Brain/Encryptor/Encryptor.h"
 
 cFiler::cFiler(const std::string filename)
 {

@@ -4,7 +4,7 @@ wxIMPLEMENT_APP(cApp);
 
 bool cApp::OnInit()
 {
-    m_frame1 = new cMain();
-    m_frame1->Show();
+    _frame1 = new cMain();
+    _frame1->Show();
     return true;
 }
