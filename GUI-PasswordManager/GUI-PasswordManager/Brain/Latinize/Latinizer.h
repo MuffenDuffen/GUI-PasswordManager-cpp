@@ -4,7 +4,7 @@
 class Latinizer
 {
 public:
-    void NumberToLatin(std::string& number);
-    std::string StringToLatin(std::string& string);
+    static std::string NumberToLatin(std::string& number);
+    static std::string StringToLatin(std::string& string);
 };
 

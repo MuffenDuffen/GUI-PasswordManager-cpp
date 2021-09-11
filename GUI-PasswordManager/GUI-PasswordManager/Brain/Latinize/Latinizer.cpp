@@ -3,9 +3,9 @@
 #include <array>
 #include <map>
 
-void NumberToLatin(std::string& number)
+std::string Latinizer::NumberToLatin(std::string& number)
         {
-            std::map<char, std::string> ones
+            const std::map<char, std::string> ones
             {
                 {'1', "Unos"},
                 {'2', "Duo"},
@@ -17,7 +17,7 @@ void NumberToLatin(std::string& number)
                 {'8', "Octo"},
                 {'9', "Novem"}
             };
-            std::map<char, std::string> tens
+            const std::map<char, std::string> tens
             {
                 {'1', "Decem"},
                 {'2', "Viginti"},
@@ -29,7 +29,7 @@ void NumberToLatin(std::string& number)
                 {'8', "Octoginta"},
                 {'9', "Nonaginta"}
             };
-            std::map<char, std::string> hundreds
+            const std::map<char, std::string> hundreds
             {
                 {'1', "Centum"},
                 {'2', "Ducenti"},
@@ -41,7 +41,7 @@ void NumberToLatin(std::string& number)
                 {'8', "Octingenti"},
                 {'9', "Nongenti"}
             };
-            std::map<char, std::string> thousands
+            const std::map<char, std::string> thousands
             {
                 {'1', "Mille"},
                 {'2', "Duo Mille"},
@@ -53,7 +53,7 @@ void NumberToLatin(std::string& number)
                 {'8', "Octo Milia"},
                 {'9', "Novem Milia"},
             };
-            std::map<char, std::string> tenthousands
+            const std::map<char, std::string> tenthousands
             {
                {'1', "Decem Milia"},
                 {'2', "Viginti Milia"},
@@ -65,22 +65,30 @@ void NumberToLatin(std::string& number)
             const std::array<std::map<char, std::string>, 5> dictionaries = {tenthousands, thousands, hundreds, tens, ones};
 
             while (number.length() < 5) number.insert(0, 1, '0');
-            
+
+            std::string latin = "";
+    
             for (int i = 0; i < number.length(); i++)
             {
                 
                 if (number[i] != '0')
                 {
-                    number += dictionaries[i].at(number[i]) + ",";
+                    latin += dictionaries[i].at(number[i]) + ",";
                 }
             }
+    
+        return latin;
         }
 
 std::string Latinizer::StringToLatin(std::string& string)
 {
+    std::string latinString = "";
+    
     for (char c : string)
     {
-        string += Latinizer::NumberToLatin(&c);
+        std::string charString = &c;
+        
+        string += NumberToLatin(charString);
     }
     return "LEL";
 }

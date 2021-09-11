@@ -1,7 +1,7 @@
 ﻿#pragma once
 #include <string>
 
-class Encryptor
+class cEncryptor
 {
 public:
     void Encrypt(std::string& to_be_encrypted);
