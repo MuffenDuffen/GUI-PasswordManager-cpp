@@ -1,11 +1,14 @@
 ﻿#pragma once
 #include <string>
 #include <vector>
+#include "../cProfile.h"
+#include "Encryptor.h"
 
 class cFiler
 {
 public:
     explicit cFiler(std::string filename);
+    void Save(std::string filename, cProfile& profile);
 
 public:
     bool New = false;
