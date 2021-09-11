@@ -4,11 +4,9 @@ std::string cEncryptor::Encrypt(std::string& to_be_encrypted)
 {
     const std::string lel = "lel";
 
-    std::string result = "";
-
     const std::string outputString = StringToLatin(lel);
 
-    result = outputString;
+    std::string result = outputString;
     
     return result;
 }
