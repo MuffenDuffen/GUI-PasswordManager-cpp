@@ -1,9 +1,10 @@
-﻿#include "Latinizer.h"
+﻿#include "../Encryptor/Encryptor.h"
 
 #include <array>
 #include <map>
+#include <string>
 
-std::string Latinizer::NumberToLatin(std::string& number)
+std::string cEncryptor::NumberToLatin(std::string& number)
         {
             const std::map<char, std::string> ones
             {
@@ -53,7 +54,7 @@ std::string Latinizer::NumberToLatin(std::string& number)
                 {'8', "Octo Milia"},
                 {'9', "Novem Milia"},
             };
-            const std::map<char, std::string> tenthousands
+            const std::map<char, std::string> tenThousands
             {
                {'1', "Decem Milia"},
                 {'2', "Viginti Milia"},
@@ -62,7 +63,7 @@ std::string Latinizer::NumberToLatin(std::string& number)
                 {'5', "Quinquaginta Milia"},
                 {'6', "Sexaginta Milia"}
             };
-            const std::array<std::map<char, std::string>, 5> dictionaries = {tenthousands, thousands, hundreds, tens, ones};
+            const std::array<std::map<char, std::string>, 5> dictionaries = {tenThousands, thousands, hundreds, tens, ones};
 
             while (number.length() < 5) number.insert(0, 1, '0');
 
@@ -80,7 +81,7 @@ std::string Latinizer::NumberToLatin(std::string& number)
         return latin;
         }
 
-std::string Latinizer::StringToLatin(std::string& string)
+std::string cEncryptor::StringToLatin(const std::string& string)
 {
     std::string latinString = "";
     
@@ -88,7 +89,7 @@ std::string Latinizer::StringToLatin(std::string& string)
     {
         std::string charString = &c;
         
-        string += NumberToLatin(charString);
+        latinString += NumberToLatin(charString) + " , ";
     }
-    return "LEL";
+    return latinString;
 }

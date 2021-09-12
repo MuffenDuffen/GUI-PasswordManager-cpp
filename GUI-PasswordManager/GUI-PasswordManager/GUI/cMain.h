@@ -2,8 +2,6 @@
 #include "wx/wx.h"
 #include "cLogin.h"
 #include "cCreator.h"
-#include "../Brain/cFiler.h"
-#include "../cProfile.h"
 
 class cMain : public wxFrame
 {
@@ -17,8 +15,6 @@ public:
 public:
 	cLogin* Login;
 	cCreator* Creator;
-	cFiler* Filer;
-	cProfile* Profile;
 
 	wxDECLARE_EVENT_TABLE();
 };

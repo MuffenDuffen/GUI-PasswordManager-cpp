@@ -1,8 +1,14 @@
 ﻿#include "Encryptor.h"
 
-void cEncryptor::Encrypt(std::string& to_be_encrypted)
+std::string cEncryptor::Encrypt(std::string& to_be_encrypted)
 {
+    const std::string lel = "lel";
+
+    const std::string outputString = StringToLatin(lel);
+
+    std::string result = outputString;
     
+    return result;
 }
 
 void cEncryptor::NextChar(std::string& input)
