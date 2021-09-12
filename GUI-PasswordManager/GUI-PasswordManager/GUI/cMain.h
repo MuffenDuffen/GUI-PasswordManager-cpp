@@ -13,8 +13,15 @@ public:
     void OnCreation(wxCommandEvent& event);
 
 public:
-	cLogin* Login;
-	cCreator* Creator;
+	// LOGIN-CREATOR
+	wxPanel* Creator;
+	wxPanel* Login;
+	wxStaticText* Text;
+    wxTextCtrl* Input;
+    wxButton* Enter;
 
+	// MAIN UI
+	
+	
 	wxDECLARE_EVENT_TABLE();
 };
