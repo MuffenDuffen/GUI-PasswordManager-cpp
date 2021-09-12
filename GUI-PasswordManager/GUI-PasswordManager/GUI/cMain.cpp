@@ -16,15 +16,16 @@ cMain::cMain() : wxFrame(nullptr, 0, "Password Manager", wxDefaultPosition,  wxS
 
     if (!file.is_open())
     {
-        Login = new wxPanel(this, 1, wxPoint(0, 0),wxSize(800, 600));
         
-        LoginObject = new cLogin(Login);
+        LoginPanel = new wxPanel(this, 1, wxPoint(0, 0),wxSize(800, 600));
+        
+        LoginObject = new cLogin(LoginPanel);
     }
     else
     {
-        Creator = new wxPanel(this, 2, wxPoint(0, 0),wxSize(800, 600));
+        CreatorPanel = new wxPanel(this, 2, wxPoint(0, 0),wxSize(800, 600));
 
-        CreatorObject = new cCreator(Creator);
+        CreatorObject = new cCreator(CreatorPanel);
     }
     
 }
@@ -35,12 +36,12 @@ cMain::~cMain()
 
 void cMain::OnLogin(wxCommandEvent& event)
 {
-    delete LoginObject;
-
     std::vector<cCredential> lol;
     lol.push_back(cCredential{"LOL", "PASS", "@"});
-    
-    MainUI = new cMainUI(this, lol);
+        
+    MainUiPanel = new wxPanel(this, 3, wxPoint(0, 0), wxSize(800, 600));
+        
+    MainUiObject = new cMainUI(MainUiPanel, lol);
 }
 
 

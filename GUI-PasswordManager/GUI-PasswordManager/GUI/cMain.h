@@ -15,14 +15,13 @@ public:
 
 public:
 	// LOGIN-CREATOR
-	wxPanel* Creator;
-	wxPanel* Login;
+	wxPanel* CreatorPanel;
+	wxPanel* LoginPanel;
+	wxPanel* MainUiPanel;
 	
 	cCreator* CreatorObject;
 	cLogin* LoginObject;
-
-	// MAIN UI
-	cMainUI* MainUI;
+	cMainUI* MainUiObject;
 	
 	wxDECLARE_EVENT_TABLE();
 };

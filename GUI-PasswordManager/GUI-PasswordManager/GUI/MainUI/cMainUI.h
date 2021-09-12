@@ -3,7 +3,7 @@
 #include "wx/wx.h"
 #include "../../cCredential.h"
 
-class cMainUI : public wxPanel
+class cMainUI
 {
 public:
     cMainUI(wxWindow* parent, std::vector<cCredential>& creds);
