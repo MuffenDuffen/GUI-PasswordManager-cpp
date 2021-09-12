@@ -1,8 +1,8 @@
 ﻿#pragma once
+#include "CreateLogin/CreateLoginPanel.h"
+#include "Login/LoginPanel.h"
+#include "MainUI/MainUI.h"
 #include "wx/wx.h"
-#include "MainUI/cMainUI.h"
-#include "CreateLogin/cCreator.h"
-#include "Login/cLogin.h"
 
 class cMain : public wxFrame
 {
@@ -15,22 +15,13 @@ public:
 
 public:
 	// Panels
-	wxPanel* CreatorPanel;
-	wxPanel* LoginPanel;
+	cCreateLoginPanel* CreateLoginPanel;
+    cLoginPanel* LoginPanel;
 	wxPanel* MainUiPanel;
-
-	// Objects
-	wxStaticText* Text;
-	wxTextCtrl* Input;
-	wxButton* Enter;
 
 	wxTextCtrl* Search;
 	wxListBox* Credentials;
 	wxButton* Add;
-
-
-	// Credentials
-	std::vector<std::string> creds;
 	
 	wxDECLARE_EVENT_TABLE();
 };
