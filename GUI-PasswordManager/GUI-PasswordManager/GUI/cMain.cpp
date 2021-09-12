@@ -35,7 +35,7 @@ void cMain::OnLogin(wxCommandEvent& event)
 {
     
     delete LoginPanel;
-    MainUiPanel = new wxPanel(this, 3, wxPoint(0, 0), wxSize(800, 600));
+    MainUiPanel = new wxPanel(this, 3, wxPoint(0, 0), wxSize(800, 561));
     
     std::vector<cCredential> lol;
     lol.push_back(cCredential{"LOL", "PASS", "@"});
@@ -44,19 +44,19 @@ void cMain::OnLogin(wxCommandEvent& event)
            
     Search = new wxTextCtrl(MainUiPanel, 999, "", wxPoint(0, 0), wxSize(200, 20));
     auto* searchSizer = new wxBoxSizer(wxHORIZONTAL);
-    searchSizer->AddSpacer(200);
+    searchSizer->AddSpacer(300);
     searchSizer->Add(Search, 1, wxEXPAND, wxALL);
-    searchSizer->AddSpacer(200);
-    masterSizer->Add(searchSizer, 1, wxEXPAND, wxDOWN);
+    searchSizer->AddSpacer(300);
+    masterSizer->Add(searchSizer, 0, wxEXPAND, wxDOWN);
 
-    Credentials = new wxListBox(MainUiPanel, 1000);
+    Credentials = new wxListBox(MainUiPanel, 1000, wxPoint(0, 0), wxSize(800, 400));
     for(auto cred : lol)
     {
         Credentials->Append(cred.App + " - " + cred.Password + " - " + cred.EMail);
     }
-    masterSizer->Add(Credentials, 1, wxEXPAND, wxALL);
+    masterSizer->Add(Credentials, 8, wxEXPAND, wxALL);
 
-    Add = new wxButton(MainUiPanel, 303, "+", wxDefaultPosition, wxSize(600, 50));
+    Add = new wxButton(MainUiPanel, 303, "+", wxPoint(0, 0), wxSize(800, 30));
     Add->SetFont(wxFont(30, wxFONTFAMILY_TELETYPE, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL));
     masterSizer->Add(Add, 1, wxEXPAND);
 

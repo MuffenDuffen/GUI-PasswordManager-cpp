@@ -39,3 +39,13 @@
 *.db-shm
 *.opendb
 *.tlog
+*.idb
+*.pdb
+*.recipe
+GUI-PasswordManager/GUI-PasswordManager/x64/Debug/GUI-Pass.cb6f4267.tlog/link.write.1.tlog
+GUI-PasswordManager/GUI-PasswordManager/x64/Debug/GUI-Pass.cb6f4267.tlog/link.read.1.tlog
+GUI-PasswordManager/GUI-PasswordManager/x64/Debug/GUI-Pass.cb6f4267.tlog/link.command.1.tlog
+GUI-PasswordManager/GUI-PasswordManager/x64/Debug/GUI-Pass.cb6f4267.tlog/GUI-PasswordManager.lastbuildstate
+GUI-PasswordManager/GUI-PasswordManager/x64/Debug/GUI-Pass.cb6f4267.tlog/CL.write.1.tlog
+GUI-PasswordManager/GUI-PasswordManager/x64/Debug/GUI-Pass.cb6f4267.tlog/CL.read.1.tlog
+GUI-PasswordManager/GUI-PasswordManager/x64/Debug/GUI-Pass.cb6f4267.tlog/CL.command.1.tlog
