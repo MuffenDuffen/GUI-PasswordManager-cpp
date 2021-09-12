@@ -14,14 +14,23 @@ public:
     void OnCreation(wxCommandEvent& event);
 
 public:
-	// LOGIN-CREATOR
+	// Panels
 	wxPanel* CreatorPanel;
 	wxPanel* LoginPanel;
 	wxPanel* MainUiPanel;
-	
-	cCreator* CreatorObject;
-	cLogin* LoginObject;
-	cMainUI* MainUiObject;
+
+	// Objects
+	wxStaticText* Text;
+	wxTextCtrl* Input;
+	wxButton* Enter;
+
+	wxTextCtrl* Search;
+	wxListBox* Credentials;
+	wxButton* Add;
+
+
+	// Credentials
+	std::vector<std::string> creds;
 	
 	wxDECLARE_EVENT_TABLE();
 };
