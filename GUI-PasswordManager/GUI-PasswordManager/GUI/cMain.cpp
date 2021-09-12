@@ -1,4 +1,5 @@
 ﻿#include "cMain.h"
+#include "../cCredential.h"
 
 #include <fstream>
 
@@ -34,7 +35,12 @@ cMain::~cMain()
 
 void cMain::OnLogin(wxCommandEvent& event)
 {
-    LoginObject->Enter->SetLabel(LoginObject->Input->GetValue());
+    delete LoginObject;
+
+    std::vector<cCredential> lol;
+    lol.push_back(cCredential{"LOL", "PASS", "@"});
+    
+    MainUI = new cMainUI(this, lol);
 }
 
 

@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include "wx/wx.h"
-#include "cCredential.h"
+#include "MainUI/cMainUI.h"
 #include "CreateLogin/cCreator.h"
 #include "Login/cLogin.h"
 
@@ -22,9 +22,7 @@ public:
 	cLogin* LoginObject;
 
 	// MAIN UI
-	wxTextCtrl* Search;
-	cCredential** Credentials;
-	wxButton* Add;
+	cMainUI* MainUI;
 	
 	wxDECLARE_EVENT_TABLE();
 };
