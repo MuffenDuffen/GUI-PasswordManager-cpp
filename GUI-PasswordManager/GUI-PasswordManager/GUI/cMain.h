@@ -1,7 +1,6 @@
 ﻿#pragma once
 #include "wx/wx.h"
-#include "cLogin.h"
-#include "cCreator.h"
+#include "cCredential.h"
 
 class cMain : public wxFrame
 {
@@ -21,7 +20,9 @@ public:
     wxButton* Enter;
 
 	// MAIN UI
-	
+	wxTextCtrl* Search;
+	cCredential** Credentials;
+	wxButton* Add;
 	
 	wxDECLARE_EVENT_TABLE();
 };

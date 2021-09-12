@@ -13,13 +13,9 @@ cMain::cMain() : wxFrame(nullptr, 0, "Password Manager", wxDefaultPosition,  wxS
 
     file.open("data");
 
-    Login = new wxPanel(this, 2, wxPoint(0, 0),wxSize(800, 600));
-    Creator = new wxPanel(this, 1, wxPoint(0, 0),wxSize(800, 600));
-    
-    
     if (file.is_open())
     {
-        delete Creator;
+        Login = new wxPanel(this, 2, wxPoint(0, 0),wxSize(800, 600));
         auto* masterSizer = new wxBoxSizer(wxVERTICAL);
 
         // Big Text
@@ -49,7 +45,7 @@ cMain::cMain() : wxFrame(nullptr, 0, "Password Manager", wxDefaultPosition,  wxS
     }
     else
     {
-        delete Login;
+        Creator = new wxPanel(this, 1, wxPoint(0, 0),wxSize(800, 600));
         auto* masterSizer = new wxBoxSizer(wxVERTICAL);
 
         // Big Text
