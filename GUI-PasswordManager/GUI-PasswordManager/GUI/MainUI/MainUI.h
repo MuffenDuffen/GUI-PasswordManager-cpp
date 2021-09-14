@@ -2,7 +2,7 @@
 #include "wx/wx.h"
 #include "../../cCredential.h"
 
-class cMainUiPanel : wxPanel
+class cMainUiPanel : public wxPanel
 {
 public:
     cMainUiPanel(wxWindow* parent, std::vector<cCredential> creds);

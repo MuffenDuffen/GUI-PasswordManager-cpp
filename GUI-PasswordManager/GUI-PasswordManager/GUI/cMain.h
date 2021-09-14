@@ -17,7 +17,7 @@ public:
 	// Panels
 	cCreateLoginPanel* CreateLoginPanel;
     cLoginPanel* LoginPanel;
-	wxPanel* MainUiPanel;
+	cMainUiPanel* MainUiPanel;
 
 	wxTextCtrl* Search;
 	wxListBox* Credentials;
